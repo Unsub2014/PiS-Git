@@ -14,6 +14,7 @@ public class ABCThread extends Thread {
             for (char c = 'a'; c <= 'z'; c++) {
                 System.out.print(c);
                 turnBig = false;
+                if(c=='z') break;
                 while (!turnBig) {
                     try {
                         Thread.sleep(10);
@@ -26,6 +27,7 @@ public class ABCThread extends Thread {
             for (char c = 'A'; c <= 'Z'; c++) {
                 System.out.print(c);
                 turnBig = true;
+                if(c=='Z') break;
                 while (turnBig) {
                     try {
                         Thread.sleep(10);
