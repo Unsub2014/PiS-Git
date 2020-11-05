@@ -11,7 +11,7 @@ public class ABCThread extends Thread {
     @Override
     public void run() {
         if (this.printBig) {
-            for (char c = 'a'; c < 'z'; c++) {
+            for (char c = 'a'; c <= 'z'; c++) {
                 System.out.print(c);
                 turnBig = false;
                 while (!turnBig) {
@@ -23,7 +23,7 @@ public class ABCThread extends Thread {
                 }
             }
         } else {
-            for (char c = 'A'; c < 'Z'; c++) {
+            for (char c = 'A'; c <= 'Z'; c++) {
                 System.out.print(c);
                 turnBig = true;
                 while (turnBig) {
