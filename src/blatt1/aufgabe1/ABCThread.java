@@ -10,22 +10,23 @@ public class ABCThread extends Thread{
     @Override
     public void run() {
         if(this.printBig){
-            for(char c = 'a'; c<'z'; c++){
+            for(char c = 'a'; c<='z'; c++){
                 System.out.print(c);
             }
         }
         else {
-            for(char c = 'A'; c<'Z'; c++){
+            for(char c = 'A'; c<='Z'; c++){
                 System.out.print(c);
             }
         }
     }
 
-    public static void main(String [] args){
+    public static void main(String [] args) throws InterruptedException {
         ABCThread big = new ABCThread(true);
         ABCThread small = new ABCThread(false);
-
         big.start();
         small.start();
+        small.join(100);
+
     }
 }
