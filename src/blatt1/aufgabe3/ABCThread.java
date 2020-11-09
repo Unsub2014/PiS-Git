@@ -16,11 +16,7 @@ public class ABCThread extends Thread {
                 turnBig = false;
                 if(c=='z') break;
                 while (!turnBig) {
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    Thread.yield();
                 }
             }
         } else {
@@ -29,11 +25,7 @@ public class ABCThread extends Thread {
                 turnBig = true;
                 if(c=='Z') break;
                 while (turnBig) {
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    Thread.yield();
                 }
             }
         }
