@@ -1,7 +1,7 @@
 package blatt2.aufgabe3;
 
 public class ThreadLister {
-    String allThreadToString(){
+    public String allThreadToString(){
         Thread currentThread = Thread.currentThread();
         ThreadGroup rootG = currentThread.getThreadGroup();
         ThreadGroup parentGroup;
